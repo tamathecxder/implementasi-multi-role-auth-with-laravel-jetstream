@@ -11,11 +11,11 @@ class HomeController extends Controller
         $role = Auth::user()->role;
 
         if ( $role == 'admin' ) {
-            return view('admin.dashboard');
+            return view('user-manage.admin.dashboard');
         } else if ( $role == 'kasir') {
-            return view('kasir.dashboard');
+            return view('user-manage.kasir.dashboard');
         } else if ( $role == 'owner' ) {
-            return view('owner.dashboard');
+            return view('user-manage.owner.dashboard');
         }
     }
 }
